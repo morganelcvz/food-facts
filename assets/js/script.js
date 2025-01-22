@@ -29,7 +29,7 @@ fetch(`https://world.openfoodfacts.org/api/v3/product/${code}`)
                 </div>
                 <div class="box-info">
                     <h1>${data.product.product_name_fr_imported == undefined ? `${data.product.product_name},  ${data.product.quantity}` : `${data.product.product_name_fr_imported}`}</h1>
-                    <span>${data.product.generic_name == undefined ? `${data.product.product_name}` : `${data.product.generic_name}`}</span>
+                    <span>${data.product.generic_name == undefined ? `${data.product.product_name}` : `${data.product.generic_name_fr}`}</span>
                     <div class="sub-info">
                         <span>
                             <b>Quantité</b>
@@ -63,7 +63,7 @@ fetch(`https://world.openfoodfacts.org/api/v3/product/${code}`)
 
 function createCategories(cat) {
     let myDiv = ""
-    let test = cat.split(", " && ",")
+    let test = cat.split(",").map(element=>element.trim())
     test.forEach(element => {
         myDiv += `
         <span>${element}</span>
