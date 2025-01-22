@@ -63,7 +63,7 @@ body .product .p-body {
   background: #fff;
   width: 90%;
   border-radius: 15px;
-  margin-top: -8rem;
+  margin-top: -10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -91,11 +91,6 @@ body .product .p-body .p-box .p-left {
   flex-direction: column;
   justify-content: center;
   padding: 20px 0px;
-}
-body .product .p-body .p-box .p-left .p-code {
-  font-family: montserrat;
-  font-size: 1.2rem;
-  text-transform: uppercase;
 }
 body .product .p-body .p-box .p-left img {
   padding: 15px;
@@ -130,6 +125,11 @@ body .product .p-body .p-box .box-info span {
   padding: 10px;
   border-radius: 15px;
 }
+@media (max-width: 575px) {
+  body .product .p-body .p-box .box-info span {
+    font-size: 1rem;
+  }
+}
 body .product .p-body .p-box .box-info .sub-info {
   display: flex;
   flex-direction: row;
@@ -148,7 +148,7 @@ body .product .p-body .p-box .box-info .sub-info span {
 }
 @media (max-width: 575px) {
   body .product .p-body .p-box .box-info .sub-info span {
-    font-size: 1rem;
+    font-size: 0.8rem;
   }
 }
 body .product .p-body .p-box .box-info .score {
@@ -182,4 +182,20 @@ body .product .p-body .p-box .box-info .tags span {
   color: #fff;
   line-height: 3rem;
   white-space: nowrap;
+}
+body footer {
+  margin-top: 5.2rem;
+  width: 100%;
+  background: rgba(86, 185, 72, 0.4);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+body footer span {
+  padding: 25px 15px;
+  font-family: montserrat;
+  font-size: 1rem;
 }/*# sourceMappingURL=style.css.map */

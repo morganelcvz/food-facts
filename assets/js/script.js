@@ -26,7 +26,6 @@ fetch(`https://world.openfoodfacts.org/api/v3/product/${code}`)
                 <div class="p-box">
                 <div class="p-left">
                 <img src="${data.product.selected_images.front.display.fr}">
-                <div class="p-code">code barre : ${data.code}</div>
                 </div>
                 <div class="box-info">
                     <h1>${data.product.product_name_fr_imported == undefined ? `${data.product.product_name},  ${data.product.quantity}` : `${data.product.product_name_fr_imported}`}</h1>
@@ -43,9 +42,9 @@ fetch(`https://world.openfoodfacts.org/api/v3/product/${code}`)
                             ${data.product.brands} 
                         </span>
                         <span>
-                            <b>Pays</b>
+                            <b>Code barre</b>
                             <br/>
-                            ${data.product.countries_imported}
+                            ${data.code}
                         </span>
                     </div>
                     <div class="score">
@@ -64,7 +63,7 @@ fetch(`https://world.openfoodfacts.org/api/v3/product/${code}`)
 
 function createCategories(cat) {
     let myDiv = ""
-    let test = cat.split(", ") 
+    let test = cat.split(", " && ",")
     test.forEach(element => {
         myDiv += `
         <span>${element}</span>
